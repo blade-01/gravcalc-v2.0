@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--===============================================================================================-->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" href="../static/fontawesome-free-5.12.0-web/css/all.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/util.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/main.css">
+    <!--===============================================================================================-->
+    <link rel="shortcut icon" href="../static/img/favicon.ico" type="image/x-icon">
+    <title>GravCalc V2.0 | Home</title>
+</head>
+
+<body>
+    <!-- Header & Nav -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="../static/img/logo.jpeg" alt="">
+                    <h1>GravCalc</h1>
+                </div>
+                <nav class="hide-on-sm">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </nav>
+                <div class="toggle hide-on-lg">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- SideNav -->
+    <div class="sideNav hide-on-lg">
+        <nav class="sideNav-content">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="wrapper">
+        <!-- Add Button -->
+        <div class="add">
+            <div class="container">
+                <i class="add-btn fa fa-plus fa-2x"></i>
+            </div>
+        </div>
+
+        <!-- Showcase -->
+        <div class="showcase">
+            <div class="container">
+                <div class="showcase-content">
+                    <table>
+                        <thead>
+                            <tr class="title">
+                                <th>T(hrs)</th>
+                                <th>∆T(mins)</th>
+                                <th>Height</th>
+                                <th>Gravity</th>
+                                <th>Remove</th>
+                            </tr>
+                        </thead>
+                        <tbody class='tbody'>
+                            <tr>
+                                <td><input type="text" id="time-hrs" placeholder="0"></td>
+                                <td><input type="text" id="time-min" placeholder="0"></td>
+                                <td><input type="text" id="height" placeholder="0"></td>
+                                <td><input type="text" id="gravity" placeholder="0"></td>
+                                <td>
+                                    <span class="table-remove"><button type="button"
+                                            class="btn btn-del">Remove</button></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" id="time-hrs" placeholder="0"></td>
+                                <td><input type="text" id="time-min" placeholder="0"></td>
+                                <td><input type="text" id="height" placeholder="0"></td>
+                                <td><input type="text" id="gravity" placeholder="0"></td>
+                                <td>
+                                    <span class="table-remove"><button type="button"
+                                            class="btn btn-del">Remove</button></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" id="time-hrs" placeholder="0"></td>
+                                <td><input type="text" id="time-min" placeholder="0"></td>
+                                <td><input type="text" id="height" placeholder="0"></td>
+                                <td><input type="text" id="gravity" placeholder="0"></td>
+                                <td>
+                                    <span class="table-remove"><button type="button"
+                                            class="btn btn-del">Remove</button></span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="btn btn-submit">Submit</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="logo">
+            <img src="../static/img/logo.jpeg" alt="">
+            <h1>GravCalc</h1>
+        </div>
+        <p><small>Copyright &copy;2020 | Made by Geng</small></p>
+    </footer>
+    <!--==============================================================================================-->
+    <script src="../static/js/main.js"></script>
+</body>
+
+</html>
