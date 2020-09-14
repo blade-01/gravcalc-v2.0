@@ -13,14 +13,22 @@ const tr = document.querySelector('tr');
 addBtn.addEventListener('click', () => {
     // Get the tr tag
     const tr = document.createElement('tr');
-    tr.innerHTML = `<td class="">
-    <input type="text" id="time-hrs" placeholder="0"></td>
-    <td class=""><input type="text" id="time-min" placeholder="0"></td>
-    <td class=""><input type="text" id="height" placeholder="0"></td>
-    <td class=""><input type="text" id="gravity" placeholder="0"></td>
-    <td>
-    <span class="table-remove"><button type="button" class="btn btn-del">Remove</button></span>
-    </td>`;
+    tr.innerHTML = `<td></td>
+    <td><input type="text" id="time-hrs" placeholder="0"></td>
+    <td><input type="text" id="time-min" placeholder="0"></td>
+    <td><input type="text" id="height" placeholder="0"></td>
+    <td><input type="text" id="gravity" placeholder="0"></td>
+    <td><input type="text" id="time-hrs" placeholder="0"></td>
+    <td><input type="text" id="time-min" placeholder="0"></td>
+    <td><input type="text" id="height" placeholder="0"></td>
+    <td><input type="text" id="gravity" placeholder="0"></td>
+    <td><input type="text" id="time-hrs" placeholder="0"></td>
+    <td><input type="text" id="time-min" placeholder="0"></td>
+    <td><input type="text" id="height" placeholder="0"></td>
+    <td><input type="text" id="gravity" placeholder="0"></td>
+    <td><input type="text" id="time-hrs" placeholder="0"></td>
+    <td><button type="button" class="btn btn-del">Remove</button></td>
+    `;
 
     // Append into the tbody
     tbody.appendChild(tr);
@@ -29,7 +37,7 @@ addBtn.addEventListener('click', () => {
 // Remove ro from table
 tbody.addEventListener('click', (del) => {
     if (del.target.classList.contains('btn-del')) {
-        var tr = del.target.parentElement;
+        var tr = del.target.parentElement.parentElement;
         tbody.removeChild(tr);
     }
 });
