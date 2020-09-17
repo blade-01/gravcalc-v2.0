@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="./static/css/style.css">
     <!--===============================================================================================-->
     <link rel="shortcut icon" href="./static/img/favicon.ico" type="image/x-icon">
-    <title>GravCalc V2.0 | Home</title>
+    <title>GravCalc V2.0 | Result</title>
 </head>
 
 <body>
@@ -21,11 +21,11 @@
     <header class="header">
         <div class="container">
             <div class="header-content">
-                <a href="index.html" class="logo">
+                <div class="logo">
                     <img src="./static/img/logo.jpeg" alt="">
                     <h1>GravCalc</h1>
-                </a>
-                <nav class="hide-on-sm">
+                </div>
+                <nav class="hide-on-sm nav">
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About</a></li>
@@ -71,26 +71,26 @@
                                     <th>Height Correction (mGals)</th>
                                     <th>Atm Effect (mGals)</th>
                                     <th>Observed Absolute Gravity (mGals)</th>
-                                    <th>Complete Bouguer Anomaly (mGals</th>
+                                    <th>Complete Bouguer Anomaly (mGals)</th>
                                     <th>Remove</th>
                                 </tr>
                             </thead>
                             <tbody class='tbody'>
                                 <tr>
                                     <td></td>
-                                    <td><input type="text" id="time-hrs" placeholder="0"></td>
-                                    <td><input type="text" id="time-min" placeholder="0"></td>
-                                    <td><input type="text" id="height" placeholder="0"></td>
-                                    <td><input type="text" id="gravity" placeholder="0"></td>
-                                    <td><input type="text" id="time-hrs" placeholder="0"></td>
-                                    <td><input type="text" id="time-min" placeholder="0"></td>
-                                    <td><input type="text" id="height" placeholder="0"></td>
-                                    <td><input type="text" id="gravity" placeholder="0"></td>
-                                    <td><input type="text" id="time-hrs" placeholder="0"></td>
-                                    <td><input type="text" id="time-min" placeholder="0"></td>
-                                    <td><input type="text" id="height" placeholder="0"></td>
-                                    <td><input type="text" id="gravity" placeholder="0"></td>
-                                    <td><input type="text" id="time-hrs" placeholder="0"></td>
+                                    <td><input type="number" id="time-min" placeholder="0"></td>
+                                    <td><input type="number" id="time-hrs" placeholder="0"></td>
+                                    <td><input type="number" id="latitude" placeholder="0"></td>
+                                    <td><input type="number" id="longitude" placeholder="0"></td>
+                                    <td><input type="number" id="height" placeholder="0"></td>
+                                    <td><input type="number" id="calibrated" placeholder="0"></td>
+                                    <td><input type="number" id="rawObsGrav" placeholder="0"></td>
+                                    <td><input type="number" id="meterDrift" placeholder="0"></td>
+                                    <td><input type="number" id="driftCorrected" placeholder="0"></td>
+                                    <td><input type="number" id="heightCorrected" placeholder="0"></td>
+                                    <td><input type="number" id="atmEffect" placeholder="0"></td>
+                                    <td><input type="number" id="ObsAbsGrav" placeholder="0"></td>
+                                    <td><input type="number" id="comBouguerAnomaly" placeholder="0"></td>
                                     <td><button type="button" class="btn btn-del">Remove</button></td>
                                 </tr>
                             </tbody>
@@ -104,10 +104,10 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <a href="index.html" class="logo">
+            <div class="logo">
                 <img src="./static/img/logo.jpeg" alt="">
                 <h1>GravCalc</h1>
-            </a>
+            </div>
             <p><small>Copyright &copy;2020 | Made by Geng</small></p>
         </div>
     </footer>
