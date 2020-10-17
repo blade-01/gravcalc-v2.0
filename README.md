@@ -34,6 +34,9 @@ python sheet1.py
 python test2.py
 ```
 -   Open the file 'GravCalcResult.xlsx' from your files directory to view your measured and corrected values.
+
+## Note
+-   If after running the 'python sheet1.py' or 'python sheet2.py' command, you notice you made mistakes in your readings, kindly delete the file and run the commands from scratch. 
   
 ## Remarks
-- Feel free to submit Pull requests if you notice any bugs or want to improve on this project
+- Feel free to submit pull requests if you notice any bugs or want to improve on this project.
