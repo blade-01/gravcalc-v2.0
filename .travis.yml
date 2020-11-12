@@ -4,4 +4,4 @@ jobs:
   - name: "Python 3.8.0 on Windows"
     os: windows
     language: shell
-install: pip install -r requirements.txt
+install: pip3 install -r requirements.txt
