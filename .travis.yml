@@ -1,0 +1,7 @@
+language: python
+jobs:
+  include:
+  - name: "Python 3.8.0 on Windows"
+    os: windows
+    language: shell
+install: pip install -r requirements.txt

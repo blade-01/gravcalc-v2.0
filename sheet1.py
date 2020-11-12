@@ -1,7 +1,9 @@
 #this file appends titles to the spreadsheet
 
 from openpyxl import Workbook, load_workbook
-from openpyxl.styles import NamedStyle, Font, Color, Border, colors, Alignment, Side
+from openpyxl.styles import NamedStyle, Font, Color, Border, colors, Alignment, Side, PatternFill
+from openpyxl.styles.differential import DifferentialStyle
+from openpyxl.formatting.rule import Rule
 import pandas as pd
 from pandas import DataFrame 
 from openpyxl.drawing.image import Image
@@ -19,10 +21,14 @@ sheet_two = gravcalc.create_sheet('Formulae',1)
 bold_font = Font(bold=True, color=colors.BLUE, size=10)
 font_alignment = Alignment(horizontal='center', vertical='center')
 font_border = Border(bottom=Side(border_style='thin'))
-
+sheet_one.freeze_panes = "B1"
 #add titles to the spreadsheet
 sheet_one["A1"] = "GRAVITY STATION"
 sheet_one["A1"].font = bold_font
+sheet_one["A3"] = "FIRST BASE STATION"
+sheet_one["A3"].font = bold_font
+sheet_one["A4"] = "LAST BASE STATION"
+sheet_one["A4"].font = bold_font
 
 sheet_one["B1"] = "TIME(hr)"
 sheet_one["B1"].font = bold_font
@@ -74,58 +80,79 @@ sheet_one["K1"].font = bold_font
 sheet_one["K2"] = "Seconds"
 sheet_one["K2"].font = bold_font
 
-sheet_one["L1"] = "TOTAL TIME"
+sheet_one["L1"] = "OBSERVED GRAVITY"
 sheet_one["L1"].font = bold_font
-sheet_one["L2"] = "(min)"
+sheet_one["L2"] = "(dial)"
 sheet_one["L2"].font = bold_font
 
-sheet_one["M1"] = "LATITUDE(DD)"
+sheet_one["M1"] = "OBSERVED GRAVITY(mgal)"
 sheet_one["M1"].font = bold_font
-sheet_one["M2"] = "(DECIMAL DEGREES)"
+sheet_one["M2"] = "(mGal)"
 sheet_one["M2"].font = bold_font
 
-sheet_one["N1"] = "LONGITUDE(DD)"
+sheet_one["N1"] = "CHANGE IN OBSERVED GRAVITY(mgal)"
 sheet_one["N1"].font = bold_font
-sheet_one["N2"] = "(DECIMAL DEGREES)"
+sheet_one["N2"] = "(mGal)"
 sheet_one["N2"].font = bold_font
 
-sheet_one["O1"] = "LATITUDE CORRECTION"
+sheet_one["O1"] = "TOTAL TIME"
 sheet_one["O1"].font = bold_font
+sheet_one["O2"] = "(min)"
+sheet_one["O2"].font = bold_font
 
-sheet_one["P1"] = "GRAVITY READING(dial)"
+sheet_one["P1"] = "CHANGE IN TIME(min)"
 sheet_one["P1"].font = bold_font
-sheet_one["P2"] = "(dial)"
+sheet_one["P2"] = "(min)" 
 sheet_one["P2"].font = bold_font
 
-sheet_one["Q1"] = "GRAVITY READING(mgal)"
+sheet_one["Q1"] = "CHANGE IN ELEVATION(m)"
 sheet_one["Q1"].font = bold_font
-sheet_one["Q2"] = "(mGal)"
+sheet_one["Q2"] = "(m)" 
 sheet_one["Q2"].font = bold_font
 
-sheet_one["R1"] = "OBSERVED GRAVITY"
+sheet_one["R1"] = "LATITUDE(DD)"
 sheet_one["R1"].font = bold_font
-sheet_one["R2"] = "(mGal)"
+sheet_one["R2"] = "(DECIMAL DEGREES)"
 sheet_one["R2"].font = bold_font
 
-sheet_one["S1"] = "FREE AIR CORRECTION"
+sheet_one["S1"] = "LONGITUDE(DD)"
 sheet_one["S1"].font = bold_font
-sheet_one["S2"] = "(mGal)"
+sheet_one["S2"] = "(DECIMAL DEGREES)"
 sheet_one["S2"].font = bold_font
 
-sheet_one["T1"] = "FREE AIR ANOMALY"
+sheet_one["T1"] = "LATITUDE CORRECTION"
 sheet_one["T1"].font = bold_font
-sheet_one["T2"] = "(mGal)"
-sheet_one["T2"].font = bold_font
 
-sheet_one["U1"] = "BOUGUER CORRECTION"
+sheet_one["U1"] = "DRIFT CORRECTION"
 sheet_one["U1"].font = bold_font
-sheet_one["U2"] = "(mGal)"
-sheet_one["U2"].font = bold_font
 
-sheet_one["V1"] = "BOUGUER ANOMALY"
+sheet_one["V1"] = "DRIFT RATE"
 sheet_one["V1"].font = bold_font
-sheet_one["V2"] = "(mGal)"
-sheet_one["V2"].font = bold_font
+
+sheet_one["W1"] = "CORRECTED GRAVITY"
+sheet_one["W1"].font = bold_font
+sheet_one["W2"] = "(mGal)"
+sheet_one["W2"].font = bold_font
+
+sheet_one["X1"] = "FREE AIR CORRECTION"
+sheet_one["X1"].font = bold_font
+sheet_one["X2"] = "(mGal)"
+sheet_one["X2"].font = bold_font
+
+sheet_one["Y1"] = "FREE AIR ANOMALY"
+sheet_one["Y1"].font = bold_font
+sheet_one["Y2"] = "(mGal)"
+sheet_one["Y2"].font = bold_font
+
+sheet_one["Z1"] = "BOUGUER CORRECTION"
+sheet_one["Z1"].font = bold_font
+sheet_one["Z2"] = "(mGal)"
+sheet_one["Z2"].font = bold_font
+
+sheet_one["AA1"] = "BOUGUER ANOMALY"
+sheet_one["AA1"].font = bold_font
+sheet_one["AA2"] = "(mGal)"
+sheet_one["AA2"].font = bold_font
 
 #appending a picture to the second sheet
 #create header
